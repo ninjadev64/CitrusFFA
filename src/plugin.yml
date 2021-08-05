@@ -1,0 +1,9 @@
+main: com.amansprojects.moonphase.ffa.Main
+name: CitrusFFA
+version: 3.1
+author: ninjadev64 (IGN ninjagamer64)
+description: Free For All
+commands: 
+   ffa:
+      description: Join the FFA infinite minigame.
+      usage: /ffa

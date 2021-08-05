@@ -1,0 +1,136 @@
+# CitrusFFA Configuration
+# Made by ninjadev64
+
+world: "FFA"
+vault money for kill: 0
+gapple on kill: true
+spawnpoints:
+   one: 
+      x: 0
+      y: 90
+      z: 0
+      pitch: 0
+      yaw: 0
+   two: 
+      x: -34
+      y: 100
+      z: 12
+      pitch: 180
+      yaw: 0
+   three: 
+      x: -34
+      y: 102
+      z: -6
+      pitch: 270
+      yaw: 0
+   four: 
+      x: -10
+      y: 101
+      z: -7
+      pitch: 90
+      yaw: 0
+   five: 
+      x: -17
+      y: 88
+      z: -44
+      pitch: 0
+      yaw: 0
+   six: 
+      x: 5
+      y: 92
+      z: -45
+      pitch: 360
+      yaw: 0
+   seven: 
+      x: 3
+      y: 89
+      z: -27
+      pitch: 180
+      yaw: 0
+   eight: 
+      x: 13
+      y: 82
+      z: -15
+      pitch: 180
+      yaw: 0
+
+items:
+   # Example:
+      # ==: org.bukkit.inventory.ItemStack (to let Bukkit/Spigot/Paper know it's an item stack)
+      # type: DIAMOND_SWORD (the item ID)
+      # damage: 100 (how many times the item has been used)
+      # amount: 1 (how many of the item)
+      # meta: (the item meta, look below)
+      #    ==: ItemMeta (to let Bukkit/Spigot/Paper know it's the item meta)
+      #    meta-type: UNSPECIFIC (Google this)
+      #    display-name: §6Sample Item (what the item should be called (as if it was named in an anvil)
+      # lore: (the item lore)
+      #    - First line of lore
+      #    - Second line of lore
+      #    - §1Color §2support
+      # enchants: (the item enchantments)
+      #    DAMAGE_ALL: 2 (sharpness, level 2)
+      #    KNOCKBACK: 7 (knockback, level 7)
+      #    FIRE_ASPECT: 1 (fire aspect, level 1)
+      
+   one:
+      ==: org.bukkit.inventory.ItemStack
+      type: IRON_SWORD
+      amount: 1
+   two: 
+      ==: org.bukkit.inventory.ItemStack
+      type: BOW
+      amount: 1
+   three:
+      ==: org.bukkit.inventory.ItemStack
+      type: ARROW
+      amount: 32
+   four:
+      #==: org.bukkit.inventory.ItemStack
+   five:
+      #==: org.bukkit.inventory.ItemStack
+   six:
+      #==: org.bukkit.inventory.ItemStack
+   seven:
+      #==: org.bukkit.inventory.ItemStack
+   eight:
+      #==: org.bukkit.inventory.ItemStack
+   nine:
+      #==: org.bukkit.inventory.ItemStack
+
+armour:
+   # Look above for an example of an itemstack (it has to be valid armour though)
+   helmet: 
+      ==: org.bukkit.inventory.ItemStack
+      type: IRON_HELMET
+      amount: 1
+   chestplate:
+      ==: org.bukkit.inventory.ItemStack
+      type: IRON_CHESTPLATE
+      amount: 1
+   leggings:
+      ==: org.bukkit.inventory.ItemStack
+      type: IRON_LEGGINGS
+      amount: 1
+   boots:
+      ==: org.bukkit.inventory.ItemStack
+      type: IRON_BOOTS
+      amount: 1
+      
+messages:
+   death:
+      # Use %s for player names.
+      # The player death messages requires two %s
+      # The natural death messages requires one %s
+      player: 
+         melee: "§a%s §cwas slain by §a%s §cin §9FFA"
+         projectile: "§a%s §cwas sniped by §a%s §cin §9FFA"
+         fall: "§a%s §cwas knocked off by §a%s §cin §9FFA"
+         fire: "§a%s §cwas burnt by §a%s §cin §9FFA"
+         void: "§a%s §cwas knocked into the abyss by §a%s §cin §9FFA"
+         other: "§a%s §cdied with help from §a%s §cin §9FFA"
+      natural: 
+         fall: "§a%s §cbecame one with the ground in §9FFA"
+         fire: "§a%s §ctried to play with fire in §9FFA"
+         void: "§a%s §cplummeted into the abyss in §9FFA"
+         default: "§a%s §cwas confused as to how they died in §9FFA"
