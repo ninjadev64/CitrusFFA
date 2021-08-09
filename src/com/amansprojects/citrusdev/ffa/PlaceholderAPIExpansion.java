@@ -1,4 +1,4 @@
-package com.amansprojects.moonphase.ffa;
+package com.amansprojects.citrusdev.ffa;
 
 import org.bukkit.OfflinePlayer;
 

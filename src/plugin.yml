@@ -1,6 +1,7 @@
-main: com.amansprojects.moonphase.ffa.Main
+main: com.amansprojects.citrusdev.ffa.Main
 name: CitrusFFA
-version: 3.2
+softdepend: [Vault, PlaceholderAPI]
+version: 3.3
 author: ninjadev64 (IGN ninjagamer64)
 description: Free For All
 commands: 

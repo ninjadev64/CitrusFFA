@@ -1,4 +1,4 @@
-package com.amansprojects.moonphase.ffa;
+package com.amansprojects.citrusdev.ffa;
 
 import java.util.Random;
 
@@ -52,7 +52,6 @@ public class CommandListener implements CommandExecutor {
         if (config.get("items.seven") != null) { player.getInventory().addItem(config.getItemStack("items.seven")); }
         if (config.get("items.eight") != null) { player.getInventory().addItem(config.getItemStack("items.eight")); }
         if (config.get("items.nine") != null) { player.getInventory().addItem(config.getItemStack("items.nine")); }
-        
         
         player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 99999, 1));
         player.setGameMode(GameMode.ADVENTURE);
