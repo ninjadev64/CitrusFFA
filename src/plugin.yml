@@ -1,9 +1,10 @@
 main: com.amansprojects.citrusdev.ffa.Main
 name: CitrusFFA
 softdepend: [Vault, PlaceholderAPI]
-version: 3.3
+version: 3.4
 author: ninjadev64 (IGN ninjagamer64)
-description: Free For All
+description: A Free For All plugin for 1.8
+website: https://www.spigotmc.org/resources/citrusffa.93680/
 commands: 
    ffa:
       description: Join the FFA infinite minigame.

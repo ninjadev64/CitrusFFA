@@ -1,53 +1,67 @@
 # CitrusFFA Configuration
-# Made by ninjadev64
+# Plugin by ninjadev64
 
 world: "FFA"
 vault money for kill: 0
 gapple on kill: true
+
+sounds:
+   # Use Bukkit sound enums
+   kill:
+      enabled: true
+      name: ORB_PICKUP
+      volume: 1
+      pitch: 1
+   death:
+      enabled: false
+      name: ENDERDRAGON_GROWL
+      volume: 1
+      pitch: 1
+
 spawnpoints:
-   one: 
+   one:
       x: 0
       y: 90
       z: 0
       pitch: 0
       yaw: 0
-   two: 
+   two:
       x: -34
       y: 100
       z: 12
       pitch: 180
       yaw: 0
-   three: 
+   three:
       x: -34
       y: 102
       z: -6
       pitch: 270
       yaw: 0
-   four: 
+   four:
       x: -10
       y: 101
       z: -7
       pitch: 90
       yaw: 0
-   five: 
+   five:
       x: -17
       y: 88
       z: -44
       pitch: 0
       yaw: 0
-   six: 
+   six:
       x: 5
       y: 92
       z: -45
       pitch: 360
       yaw: 0
-   seven: 
+   seven:
       x: 3
       y: 89
       z: -27
       pitch: 180
       yaw: 0
-   eight: 
+   eight:
       x: 13
       y: 82
       z: -15
@@ -99,7 +113,7 @@ items:
       #==: org.bukkit.inventory.ItemStack
 
 armour:
-   # Look above for an example of an itemstack (it has to be valid armour though)
+   # Look above for an example of an itemstack (it has to be valid armour, except for the helmet)
    helmet: 
       ==: org.bukkit.inventory.ItemStack
       type: IRON_HELMET
