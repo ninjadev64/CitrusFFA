@@ -9,3 +9,8 @@ commands:
    ffa:
       description: Join the FFA infinite minigame.
       usage: /ffa
+      permission: citrusffa.play
+permissions:
+   citrusffa.play:
+      description: Join the FFA infinite minigame.
+      default: true
