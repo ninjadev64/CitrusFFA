@@ -19,6 +19,7 @@ public class Main extends JavaPlugin {
 		if(getServer().getPluginManager().getPlugin("Vault") != null) {
 			getServer().getPluginManager().registerEvents(new VaultHandler(this), this);
 		}
+		new Metrics(this, 13107);
 		getLogger().info("CitrusFFA Enabled");
 	}
 	
