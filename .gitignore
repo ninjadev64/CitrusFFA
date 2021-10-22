@@ -1,3 +1,6 @@
 .idea/
+.settings/
 bin/
 CitrusFFA.iml
+.classpath
+.project
