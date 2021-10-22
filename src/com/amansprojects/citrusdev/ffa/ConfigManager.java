@@ -21,10 +21,10 @@ public class ConfigManager {
 	public FileConfiguration getConfig() { return this.config; }
 
 	public void createConfig() {
-        this.configFile = new File(this.plugin.getDataFolder(), name+".yml");
+        this.configFile = new File(this.plugin.getDataFolder(), name + ".yml");
         if (!this.configFile.exists()) {
             this.configFile.getParentFile().mkdirs();
-            this.plugin.saveResource(name+".yml", false);
+            this.plugin.saveResource(name + ".yml", false);
 		}
         this.config = new YamlConfiguration();
         try { this.config.load(this.configFile); }
@@ -32,7 +32,7 @@ public class ConfigManager {
     }
 
 	public void saveConfig() {
-		try { this.config.save(configFile); }
+		try { this.config.save(this.configFile); }
 		catch (IOException e) { e.printStackTrace(); }
 	}
 }

@@ -1,5 +1,4 @@
 package com.amansprojects.citrusdev.ffa;
-
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -13,10 +12,10 @@ public class Main extends JavaPlugin {
 		statConfigManager.createConfig();
 		getCommand("ffa").setExecutor(commandListener);
 		getServer().getPluginManager().registerEvents(deathListener, this);
-		if(getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
+		if (getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
 			new PlaceholderAPIExpansion(this).register();
 		}
-		if(getServer().getPluginManager().getPlugin("Vault") != null) {
+		if (getServer().getPluginManager().getPlugin("Vault") != null) {
 			getServer().getPluginManager().registerEvents(new VaultHandler(this), this);
 		}
 		new Metrics(this, 13107);
