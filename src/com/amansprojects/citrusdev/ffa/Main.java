@@ -10,6 +10,7 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		saveDefaultConfig();
 		statConfigManager.createConfig();
+		deathListener.reloadStatsConfig();
 		getCommand("ffa").setExecutor(commandListener);
 		getServer().getPluginManager().registerEvents(deathListener, this);
 		if (getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {

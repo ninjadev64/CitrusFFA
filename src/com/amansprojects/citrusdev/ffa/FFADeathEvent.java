@@ -18,7 +18,6 @@ public class FFADeathEvent extends Event {
 
     @Override
     public HandlerList getHandlers() { return HANDLERS_LIST; }
-
     public static HandlerList getHandlerList() { return HANDLERS_LIST; }
 
     public Player getKiller() { return killer; }

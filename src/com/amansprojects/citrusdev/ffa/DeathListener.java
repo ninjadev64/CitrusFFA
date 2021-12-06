@@ -19,8 +19,9 @@ public class DeathListener implements Listener {
 	public DeathListener(Main main) {
 		this.plugin = main;
 		this.config = this.plugin.getConfig();
-		this.statsConfig = this.plugin.statConfigManager.getConfig();
 	}
+
+	public void reloadStatsConfig() { this.statsConfig = this.plugin.statConfigManager.getConfig(); }
 	
 	@EventHandler
 	public void onEntityDeath(EntityDeathEvent event){
