@@ -22,17 +22,13 @@ public class PlaceholderAPIExpansion extends PlaceholderExpansion {
         if(params.equalsIgnoreCase("kills")) {
         	int kills = this.plugin.statConfigManager.getConfig().getInt(player.getUniqueId() + ".kills");
         	if (kills == 0) { return "0"; }
-        	else {
-        		return Integer.toString(kills);
-        	}
+        	else { return Integer.toString(kills); }
         }
         
         if(params.equalsIgnoreCase("deaths")) {
         	int deaths = this.plugin.statConfigManager.getConfig().getInt(player.getUniqueId() + ".deaths");
         	if (deaths == 0) { return "0"; }
-        	else {
-        		return Integer.toString(deaths);
-        	}
+        	else { return Integer.toString(deaths); }
         }
         return null;
     }
