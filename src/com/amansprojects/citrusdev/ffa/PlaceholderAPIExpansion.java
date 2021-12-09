@@ -19,17 +19,18 @@ public class PlaceholderAPIExpansion extends PlaceholderExpansion {
     
     @Override
     public String onRequest(OfflinePlayer player, String params) {
-        if(params.equalsIgnoreCase("kills")) {
+        if (params.equalsIgnoreCase("kills")) {
         	int kills = this.plugin.statConfigManager.getConfig().getInt(player.getUniqueId() + ".kills");
         	if (kills == 0) { return "0"; }
         	else { return Integer.toString(kills); }
         }
         
-        if(params.equalsIgnoreCase("deaths")) {
+        if (params.equalsIgnoreCase("deaths")) {
         	int deaths = this.plugin.statConfigManager.getConfig().getInt(player.getUniqueId() + ".deaths");
         	if (deaths == 0) { return "0"; }
         	else { return Integer.toString(deaths); }
         }
+	
         return null;
     }
 }
