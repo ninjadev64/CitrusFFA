@@ -1,7 +1,7 @@
 main: com.amansprojects.citrusdev.ffa.Main
 name: CitrusFFA
 softdepend: [Vault, PlaceholderAPI]
-version: 4.0.0
+version: 4.1.0
 author: ninjadev64 (IGN ninjagamer64)
 description: A Free For All plugin for 1.8
 website: https://www.spigotmc.org/resources/citrusffa.93680/
