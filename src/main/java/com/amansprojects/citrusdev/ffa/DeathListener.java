@@ -10,6 +10,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class DeathListener implements Listener {
 	private final Main plugin;
@@ -65,6 +67,8 @@ public class DeathListener implements Listener {
 	        		playerEvent.setDeathMessage(String.format(config.getString(deathConfigNode), player.getName()));
 	        	}
 	        	statsConfig.set(player.getUniqueId() + ".deaths", statsConfig.getInt(player.getUniqueId() + ".deaths") + 1);
+				player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 3, 255));
+				player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 3, 255));
 				if (config.getBoolean("sounds.death.enabled")) {
 					player.playSound(
 							player.getLocation(),

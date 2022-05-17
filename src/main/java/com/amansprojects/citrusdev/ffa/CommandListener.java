@@ -10,6 +10,7 @@ import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
@@ -26,6 +27,25 @@ public class CommandListener implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
+
+			if (args.length >= 1) if (args[0].equalsIgnoreCase("leave")) {
+				ConfigurationSection leaveConfig = config.getConfigurationSection("leave command");
+				if (!leaveConfig.getBoolean("enabled")) {
+					player.sendMessage("§cYou are not allowed to use this command!");
+					return false;
+				}
+
+				player.getInventory().clear();
+				player.getInventory().setArmorContents(null);
+				ConfigurationSection lobbyLocationConfig = leaveConfig.getConfigurationSection("location");
+				player.teleport(new Location(Bukkit.getWorld(
+					lobbyLocationConfig.getString("world")),
+					lobbyLocationConfig.getInt("x"), lobbyLocationConfig.getInt("y"), lobbyLocationConfig.getInt("z"),
+					lobbyLocationConfig.getInt("pitch"), lobbyLocationConfig.getInt("yaw")
+				));
+				return true;
+			}
+
 			sendPlayerToGame(player);
             return true;
 		}

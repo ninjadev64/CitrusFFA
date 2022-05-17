@@ -130,7 +130,18 @@ armour:
       ==: org.bukkit.inventory.ItemStack
       type: IRON_BOOTS
       amount: 1
-      
+
+leave command:
+   enabled: false
+   location:
+      world: Lobby
+      x: 0.5
+      y: 7
+      z: 0.5
+      pitch: 0
+      yaw: 0
+   restore inventory: false
+
 messages:
    death:
       # Use %s for player names.
